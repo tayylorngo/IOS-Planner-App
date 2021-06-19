@@ -40,21 +40,79 @@
             </objects>
             <point key="canvasLocation" x="867" y="915"/>
         </scene>
-        <!--Home-->
-        <scene sceneID="xGm-wW-qOa">
+        <!--My Table View Controller-->
+        <scene sceneID="lB4-X2-HtP">
             <objects>
-                <viewController title="Home" id="edP-Om-bPG" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fLM-n4-bv8">
+                <tableViewController id="rCv-ob-wAK" customClass="MyTableViewController" customModule="Planner_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="skX-Mj-v0a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Dd2-q9-WDk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="home" id="fYE-dT-LgU"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b28-Sr-OI5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="80" id="Cpc-P4-2Ji" customClass="ListItemCell" customModule="Planner_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cpc-P4-2Ji" id="tBU-CE-cd5">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssR-M9-jxe">
+                                            <rect key="frame" x="33" y="11" width="43" height="29"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subject" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMU-ul-6g4">
+                                            <rect key="frame" x="33" y="40" width="42" height="14"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THj-dd-cmE">
+                                            <rect key="frame" x="352" y="19" width="34" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dayOfWeek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2j-QK-zwZ">
+                                            <rect key="frame" x="320" y="40" width="66" height="15"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ssR-M9-jxe" firstAttribute="top" secondItem="tBU-CE-cd5" secondAttribute="topMargin" id="16u-37-WIN"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="ssR-M9-jxe" secondAttribute="bottom" constant="29" id="8nJ-W1-MbQ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="DMU-ul-6g4" secondAttribute="bottom" constant="15" id="Cjj-aN-RVO"/>
+                                        <constraint firstItem="DMU-ul-6g4" firstAttribute="leading" secondItem="tBU-CE-cd5" secondAttribute="leadingMargin" constant="13" id="Fe8-gX-XKt"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="THj-dd-cmE" secondAttribute="trailing" constant="8" id="GbF-Ar-DOr"/>
+                                        <constraint firstItem="h2j-QK-zwZ" firstAttribute="top" secondItem="THj-dd-cmE" secondAttribute="bottom" id="HFx-3b-mDU"/>
+                                        <constraint firstAttribute="bottom" secondItem="h2j-QK-zwZ" secondAttribute="bottom" constant="25" id="O1f-ZA-myZ"/>
+                                        <constraint firstItem="THj-dd-cmE" firstAttribute="top" secondItem="tBU-CE-cd5" secondAttribute="topMargin" constant="8" id="Tjd-Rg-Wb0"/>
+                                        <constraint firstItem="ssR-M9-jxe" firstAttribute="leading" secondItem="tBU-CE-cd5" secondAttribute="leadingMargin" constant="13" id="ko1-FV-BAw"/>
+                                        <constraint firstItem="DMU-ul-6g4" firstAttribute="top" secondItem="ssR-M9-jxe" secondAttribute="bottom" id="o3h-gL-8jQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="h2j-QK-zwZ" secondAttribute="trailing" constant="28" id="wbG-7g-lC7"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="THj-dd-cmE" id="61o-Dd-6XQ"/>
+                                    <outlet property="dayOfWeekLabel" destination="h2j-QK-zwZ" id="oBW-PY-Sop"/>
+                                    <outlet property="nameLabel" destination="ssR-M9-jxe" id="y7T-ss-1HO"/>
+                                    <outlet property="subjectLabel" destination="DMU-ul-6g4" id="FcE-PL-4mV"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="rCv-ob-wAK" id="4wp-PG-HfD"/>
+                            <outlet property="delegate" destination="rCv-ob-wAK" id="G7M-uA-6XT"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="" image="home" id="UhZ-y5-V6c"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f3h-ed-etZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="915"/>
+            <point key="canvasLocation" x="-219" y="901"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="VHQ-Rm-LeD">
@@ -66,7 +124,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="edP-Om-bPG" kind="relationship" relationship="viewControllers" id="hUK-F9-W5v"/>
+                        <segue destination="rCv-ob-wAK" kind="relationship" relationship="viewControllers" id="BFU-rp-cBt"/>
                         <segue destination="aJz-OL-DbP" kind="relationship" relationship="viewControllers" id="9bz-tW-L10"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="yLt-Dq-CBe"/>
                     </connections>
@@ -80,6 +138,9 @@
         <image name="cal" width="26" height="26"/>
         <image name="home" width="26" height="26"/>
         <image name="teacher" width="26" height="26"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

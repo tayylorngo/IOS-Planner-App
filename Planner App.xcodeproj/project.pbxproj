@@ -16,6 +16,7 @@
 		496E69FC267C94B90097EFD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 496E69FA267C94B90097EFD9 /* LaunchScreen.storyboard */; };
 		496E6A07267C94B90097EFD9 /* Planner_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496E6A06267C94B90097EFD9 /* Planner_AppTests.swift */; };
 		496E6A12267C94B90097EFD9 /* Planner_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496E6A11267C94B90097EFD9 /* Planner_AppUITests.swift */; };
+		496E6A20267D99CD0097EFD9 /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496E6A1F267D99CD0097EFD9 /* MyTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		496E6A0D267C94B90097EFD9 /* Planner AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Planner AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		496E6A11267C94B90097EFD9 /* Planner_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planner_AppUITests.swift; sourceTree = "<group>"; };
 		496E6A13267C94B90097EFD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		496E6A1F267D99CD0097EFD9 /* MyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				496E69FA267C94B90097EFD9 /* LaunchScreen.storyboard */,
 				496E69FD267C94B90097EFD9 /* Info.plist */,
 				496E69F5267C94B40097EFD9 /* Planner_App.xcdatamodeld */,
+				496E6A1F267D99CD0097EFD9 /* MyTableViewController.swift */,
 			);
 			path = "Planner App";
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				496E69F7267C94B40097EFD9 /* Planner_App.xcdatamodeld in Sources */,
 				496E69F1267C94B40097EFD9 /* ViewController.swift in Sources */,
 				496E69ED267C94B40097EFD9 /* AppDelegate.swift in Sources */,
+				496E6A20267D99CD0097EFD9 /* MyTableViewController.swift in Sources */,
 				496E69EF267C94B40097EFD9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
