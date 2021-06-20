@@ -9,6 +9,10 @@ import UIKit
 
 class MyTableViewController: UITableViewController {
     
+    let datePicker = UIDatePicker()
+    let toolbar = UIToolbar()
+    let dateTextField = UITextField()
+
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     public var models: [ToDoListItem] = []
@@ -16,20 +20,53 @@ class MyTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAdd))
+        self.datePicker.preferredDatePickerStyle = .wheels
+        self.datePicker.datePickerMode = .date
+//        createDatePicker()
         getAllItems()
     }
-    
+        
     @objc private func didTapAdd(){
         let alert = UIAlertController(title: "New Item", message: "Create new item", preferredStyle: .alert)
-        alert.addTextField(configurationHandler: nil)
+        alert.addTextField {
+            (textField) in
+            textField.placeholder = "Name"
+        }
+        alert.addTextField {
+            (textField) in
+            textField.placeholder = "Subject"
+        }
+        alert.addTextField {
+            (dateTextField) in
+            dateTextField.placeholder = "Due Date"
+            dateTextField.inputAccessoryView = self.toolbar
+            dateTextField.inputView = self.datePicker
+        }
+        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: {_ in}))
         alert.addAction(UIAlertAction(title: "Submit", style: .cancel, handler: { [weak self]
             _ in
             guard let field = alert.textFields?.first, let text = field.text, !text.isEmpty else { return }
-            self?.createItem(name: text, subject: "CSE 390", date: Date())
+            guard let field2 = alert.textFields?[1], let text2 = field2.text, !text2.isEmpty
+            else {return}
+            self?.createItem(name: text, subject: text2, date: self?.datePicker.date ?? Date())
         }))
         present(alert, animated: true)
     }
+        
+    func createDatePicker(){
+        toolbar.sizeToFit()
+        let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        toolbar.setItems([doneBtn], animated: true)
+    }
     
+    @objc func donePressed(){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        dateTextField.text = dateFormatter.string(from: datePicker.date)
+        self.view.endEditing(true)
+    }
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -56,6 +93,11 @@ class MyTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let sheet = UIAlertController(title: "Edit Item", message: nil, preferredStyle: .actionSheet)
+        
+        
+        
+        present(sheet, animated: true)
     }
     
     func getAllItems() {
