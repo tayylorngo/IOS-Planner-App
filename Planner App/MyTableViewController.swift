@@ -19,11 +19,23 @@ class MyTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setDateTitle()
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAdd))
         self.datePicker.preferredDatePickerStyle = .wheels
         self.datePicker.datePickerMode = .date
 //        createDatePicker()
         getAllItems()
+    }
+    
+    func setDateTitle(){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        dateFormatter.dateFormat = "EEEE"
+        let dayOfWeek = dateFormatter.string(from: Date())
+        dateFormatter.dateFormat = "M/dd"
+        let day = dateFormatter.string(from: Date())
+        self.navigationController?.navigationBar.topItem?.title = dayOfWeek + " " + day
     }
         
     @objc private func didTapAdd(){
@@ -94,7 +106,7 @@ class MyTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let item = models[indexPath.row]
-        let sheet = UIAlertController(title: "Update Item", message: nil, preferredStyle: .actionSheet)
+        let sheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         sheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         sheet.addAction(UIAlertAction(title: "Edit", style: .default, handler: { _ in
             let alert = UIAlertController(title: "Edit Item", message: nil, preferredStyle: .alert)
