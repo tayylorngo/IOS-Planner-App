@@ -17,6 +17,8 @@
 		496E6A07267C94B90097EFD9 /* Planner_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496E6A06267C94B90097EFD9 /* Planner_AppTests.swift */; };
 		496E6A12267C94B90097EFD9 /* Planner_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496E6A11267C94B90097EFD9 /* Planner_AppUITests.swift */; };
 		496E6A20267D99CD0097EFD9 /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496E6A1F267D99CD0097EFD9 /* MyTableViewController.swift */; };
+		496E6A25267E3CAF0097EFD9 /* ToDoListItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496E6A23267E3CAF0097EFD9 /* ToDoListItem+CoreDataClass.swift */; };
+		496E6A26267E3CAF0097EFD9 /* ToDoListItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496E6A24267E3CAF0097EFD9 /* ToDoListItem+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		496E6A11267C94B90097EFD9 /* Planner_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planner_AppUITests.swift; sourceTree = "<group>"; };
 		496E6A13267C94B90097EFD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		496E6A1F267D99CD0097EFD9 /* MyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
+		496E6A23267E3CAF0097EFD9 /* ToDoListItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoListItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		496E6A24267E3CAF0097EFD9 /* ToDoListItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoListItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 		496E69EB267C94B40097EFD9 /* Planner App */ = {
 			isa = PBXGroup;
 			children = (
+				496E6A27267E3CD10097EFD9 /* ToDoListItem */,
 				496E69EC267C94B40097EFD9 /* AppDelegate.swift */,
 				496E69EE267C94B40097EFD9 /* SceneDelegate.swift */,
 				496E69F0267C94B40097EFD9 /* ViewController.swift */,
@@ -132,6 +137,15 @@
 				496E6A13267C94B90097EFD9 /* Info.plist */,
 			);
 			path = "Planner AppUITests";
+			sourceTree = "<group>";
+		};
+		496E6A27267E3CD10097EFD9 /* ToDoListItem */ = {
+			isa = PBXGroup;
+			children = (
+				496E6A24267E3CAF0097EFD9 /* ToDoListItem+CoreDataProperties.swift */,
+				496E6A23267E3CAF0097EFD9 /* ToDoListItem+CoreDataClass.swift */,
+			);
+			path = ToDoListItem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,8 +280,10 @@
 			files = (
 				496E69F7267C94B40097EFD9 /* Planner_App.xcdatamodeld in Sources */,
 				496E69F1267C94B40097EFD9 /* ViewController.swift in Sources */,
+				496E6A25267E3CAF0097EFD9 /* ToDoListItem+CoreDataClass.swift in Sources */,
 				496E69ED267C94B40097EFD9 /* AppDelegate.swift in Sources */,
 				496E6A20267D99CD0097EFD9 /* MyTableViewController.swift in Sources */,
+				496E6A26267E3CAF0097EFD9 /* ToDoListItem+CoreDataProperties.swift in Sources */,
 				496E69EF267C94B40097EFD9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
