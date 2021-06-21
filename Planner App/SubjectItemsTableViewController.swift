@@ -70,6 +70,9 @@ class SubjectItemsTableViewController: UITableViewController {
         var dayOfWeek = dateFormatter.string(from: date ?? Date())
         dayOfWeek = String(dayOfWeek.prefix(3))
         cell.dayOfWeekLabel?.text = dayOfWeek
+        if Date() > date ?? Date() {
+            cell.backgroundColor = .lightGray
+        }
         return cell
     }
     

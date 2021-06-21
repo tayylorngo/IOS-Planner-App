@@ -52,9 +52,6 @@ class SubjectTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         rowSelected = indexPath.row
         performSegue(withIdentifier: "showSubjectItems", sender: self)
-//        let vc = SubjectItemsTableViewController(subject: subjects[indexPath.row])
-//        vc.title = subjects[indexPath.row]
-//        navigationController?.pushViewController(vc, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
