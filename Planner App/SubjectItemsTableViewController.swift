@@ -71,7 +71,17 @@ class SubjectItemsTableViewController: UITableViewController {
         dayOfWeek = String(dayOfWeek.prefix(3))
         cell.dayOfWeekLabel?.text = dayOfWeek
         if Date() > date ?? Date() {
-            cell.backgroundColor = .lightGray
+            cell.backgroundColor = .systemGray
+        }
+        let calendar: Calendar = Calendar(identifier: .gregorian)
+        if calendar.isDate(Date(), inSameDayAs: date ?? Date()){
+            cell.backgroundColor = .red
+        }
+        else if calendar.isDateInTomorrow(date ?? Date()){
+            cell.backgroundColor = .systemBlue
+        }
+        else if date ?? Date() > Date() {
+            cell.backgroundColor = .systemGreen
         }
         return cell
     }
