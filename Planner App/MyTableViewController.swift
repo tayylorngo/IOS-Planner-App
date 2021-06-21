@@ -23,7 +23,7 @@ class MyTableViewController: UITableViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAdd))
         self.datePicker.preferredDatePickerStyle = .wheels
         self.datePicker.datePickerMode = .date
-//        createDatePicker()
+        createDatePicker()
         getAllItems()
     }
     
@@ -39,6 +39,7 @@ class MyTableViewController: UITableViewController {
     }
         
     @objc private func didTapAdd(){
+        self.datePicker.date = Date()
         let alert = UIAlertController(title: "New Item", message: "Create new item", preferredStyle: .alert)
         alert.addTextField {
             (textField) in
