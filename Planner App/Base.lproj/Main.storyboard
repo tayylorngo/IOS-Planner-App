@@ -178,15 +178,25 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ix-NN-zf9">
+                                            <rect key="frame" x="352" y="19.5" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="I0d-rp-dVh" firstAttribute="top" secondItem="rqK-rY-s98" secondAttribute="topMargin" constant="8.5" id="Jzp-ly-owm"/>
+                                        <constraint firstItem="6ix-NN-zf9" firstAttribute="centerY" secondItem="rqK-rY-s98" secondAttribute="centerY" id="Q1B-mp-QLl"/>
+                                        <constraint firstAttribute="trailing" secondItem="6ix-NN-zf9" secondAttribute="trailing" constant="20" id="RNz-Wy-30B"/>
                                         <constraint firstItem="I0d-rp-dVh" firstAttribute="leading" secondItem="rqK-rY-s98" secondAttribute="leadingMargin" constant="10" id="cZV-DR-M4o"/>
+                                        <constraint firstItem="6ix-NN-zf9" firstAttribute="trailing" secondItem="rqK-rY-s98" secondAttribute="trailingMargin" constant="10" id="d3s-cl-zTp"/>
                                         <constraint firstItem="I0d-rp-dVh" firstAttribute="centerY" secondItem="rqK-rY-s98" secondAttribute="centerY" id="noy-P0-XsV"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="I0d-rp-dVh" secondAttribute="bottom" constant="8.5" id="s3N-1F-Dc4"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="numberOfTasksLabel" destination="6ix-NN-zf9" id="Zqd-rn-QK4"/>
                                     <outlet property="subjectLabel" destination="I0d-rp-dVh" id="S4H-EC-t9E"/>
                                 </connections>
                             </tableViewCell>

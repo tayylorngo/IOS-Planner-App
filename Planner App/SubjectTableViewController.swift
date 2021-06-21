@@ -27,7 +27,14 @@ class SubjectTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "subjectCell", for: indexPath) as! ListItemCell2
+        var count = 0
+        for item in models {
+            if subjects[indexPath.row] == item.subject {
+                count += 1
+            }
+        }
         cell.subjectLabel?.text = subjects[indexPath.row]
+        cell.numberOfTasksLabel?.text = String(count)
         return cell
     }
 
@@ -42,6 +49,8 @@ class SubjectTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        
     }
     
     func getAllClasses(){
@@ -63,4 +72,5 @@ class SubjectTableViewController: UITableViewController {
 
 class ListItemCell2: UITableViewCell{
     @IBOutlet weak var subjectLabel: UILabel!
+    @IBOutlet weak var numberOfTasksLabel: UILabel!
 }
