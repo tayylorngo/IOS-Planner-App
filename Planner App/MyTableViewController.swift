@@ -16,7 +16,7 @@ class MyTableViewController: UITableViewController {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     public var models: [ToDoListItem] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setDateTitle()

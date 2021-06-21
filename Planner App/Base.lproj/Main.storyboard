@@ -41,13 +41,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssR-M9-jxe">
-                                            <rect key="frame" x="33" y="11" width="43" height="9"/>
+                                            <rect key="frame" x="25" y="11" width="43" height="9"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subject" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMU-ul-6g4">
-                                            <rect key="frame" x="33" y="20" width="42" height="14"/>
+                                            <rect key="frame" x="25" y="20" width="42" height="14"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" systemColor="opaqueSeparatorColor"/>
                                             <nil key="highlightedColor"/>
@@ -69,13 +69,12 @@
                                         <constraint firstItem="ssR-M9-jxe" firstAttribute="top" secondItem="tBU-CE-cd5" secondAttribute="topMargin" id="16u-37-WIN"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="ssR-M9-jxe" secondAttribute="bottom" constant="29" id="8nJ-W1-MbQ"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="DMU-ul-6g4" secondAttribute="bottom" constant="15" id="Cjj-aN-RVO"/>
-                                        <constraint firstItem="DMU-ul-6g4" firstAttribute="leading" secondItem="tBU-CE-cd5" secondAttribute="leadingMargin" constant="13" id="Fe8-gX-XKt"/>
+                                        <constraint firstItem="DMU-ul-6g4" firstAttribute="leading" secondItem="tBU-CE-cd5" secondAttribute="leadingMargin" constant="5" id="Fe8-gX-XKt"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="THj-dd-cmE" secondAttribute="trailing" constant="8" id="GbF-Ar-DOr"/>
-                                        <constraint firstItem="ssR-M9-jxe" firstAttribute="leading" secondItem="tBU-CE-cd5" secondAttribute="leadingMargin" constant="5" id="Gki-n9-QXz"/>
                                         <constraint firstItem="h2j-QK-zwZ" firstAttribute="top" secondItem="THj-dd-cmE" secondAttribute="bottom" id="HFx-3b-mDU"/>
                                         <constraint firstAttribute="bottom" secondItem="h2j-QK-zwZ" secondAttribute="bottom" constant="25" id="O1f-ZA-myZ"/>
                                         <constraint firstItem="THj-dd-cmE" firstAttribute="top" secondItem="tBU-CE-cd5" secondAttribute="topMargin" constant="8" id="Tjd-Rg-Wb0"/>
-                                        <constraint firstItem="ssR-M9-jxe" firstAttribute="leading" secondItem="tBU-CE-cd5" secondAttribute="leadingMargin" constant="13" id="ko1-FV-BAw"/>
+                                        <constraint firstItem="ssR-M9-jxe" firstAttribute="leading" secondItem="tBU-CE-cd5" secondAttribute="leadingMargin" constant="5" id="ko1-FV-BAw"/>
                                         <constraint firstItem="DMU-ul-6g4" firstAttribute="top" secondItem="ssR-M9-jxe" secondAttribute="bottom" id="o3h-gL-8jQ"/>
                                         <constraint firstAttribute="trailing" secondItem="h2j-QK-zwZ" secondAttribute="trailing" constant="28" id="wbG-7g-lC7"/>
                                     </constraints>
@@ -97,7 +96,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f3h-ed-etZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-75" y="901"/>
+            <point key="canvasLocation" x="-64" y="901"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="VHQ-Rm-LeD">
@@ -155,6 +154,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F4y-Fk-oJL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="872" y="915"/>
+        </scene>
+        <!--Subject Items Table View Controller-->
+        <scene sceneID="9T1-Lf-v6t">
+            <objects>
+                <tableViewController id="cCF-aG-YLf" customClass="SubjectItemsTableViewController" customModule="Planner_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bBU-xv-px0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell2" id="Xjk-sk-CGU" customClass="ListItemCell3" customModule="Planner_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xjk-sk-CGU" id="Bv4-yI-b1a">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypa-bf-HYl">
+                                            <rect key="frame" x="29" y="11" width="45" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Ypa-bf-HYl" firstAttribute="top" secondItem="Bv4-yI-b1a" secondAttribute="topMargin" id="IWX-0c-FBj"/>
+                                        <constraint firstItem="Ypa-bf-HYl" firstAttribute="centerY" secondItem="Bv4-yI-b1a" secondAttribute="centerY" id="enL-zP-f2Q"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Ypa-bf-HYl" secondAttribute="bottom" constant="0.5" id="nPW-7P-to3"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="Ypa-bf-HYl" id="9rK-92-rh4"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cCF-aG-YLf" id="JPV-ia-x3F"/>
+                            <outlet property="delegate" destination="cCF-aG-YLf" id="KXX-NE-b8C"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rPc-Gu-naT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="479" y="1562"/>
         </scene>
         <!--Classes-->
         <scene sceneID="fNI-SH-UCS">

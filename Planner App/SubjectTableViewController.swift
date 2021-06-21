@@ -49,8 +49,15 @@ class SubjectTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        
+        var filteredItems:[ToDoListItem] = []
+        for item in models{
+            if item.subject == subjects[indexPath.row] {
+                filteredItems.append(item)
+            }
+        }
+        let vc = SubjectItemsTableViewController(items: filteredItems)
+        vc.title = subjects[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func getAllClasses(){
