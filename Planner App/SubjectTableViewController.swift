@@ -20,8 +20,9 @@ class SubjectTableViewController: UITableViewController {
         self.navigationController?.navigationBar.topItem?.title = "Classes"
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        print("YOO")
+    override func viewDidAppear(_ animated: Bool) {
+        subjects = []
+        getAllClasses()
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -39,6 +40,10 @@ class SubjectTableViewController: UITableViewController {
         return subjects.count
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     func getAllClasses(){
         do{
             models = try context.fetch(ToDoListItem.fetchRequest())
@@ -53,7 +58,6 @@ class SubjectTableViewController: UITableViewController {
         catch{
             print("error")
         }
-
     }
 }
 
