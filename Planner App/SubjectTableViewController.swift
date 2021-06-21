@@ -11,6 +11,7 @@ class SubjectTableViewController: UITableViewController {
     
     public var models: [ToDoListItem] = []
     public var subjects: [String] = []
+    var rowSelected: Int = 0
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
 
@@ -49,15 +50,17 @@ class SubjectTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        var filteredItems:[ToDoListItem] = []
-        for item in models{
-            if item.subject == subjects[indexPath.row] {
-                filteredItems.append(item)
-            }
+        rowSelected = indexPath.row
+        performSegue(withIdentifier: "showSubjectItems", sender: self)
+//        let vc = SubjectItemsTableViewController(subject: subjects[indexPath.row])
+//        vc.title = subjects[indexPath.row]
+//        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? SubjectItemsTableViewController {
+            destination.subject = subjects[rowSelected]
         }
-        let vc = SubjectItemsTableViewController(items: filteredItems)
-        vc.title = subjects[indexPath.row]
-        navigationController?.pushViewController(vc, animated: true)
     }
     
     func getAllClasses(){
