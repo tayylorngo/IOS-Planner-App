@@ -15,14 +15,31 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qY0-xV-f0M" customClass="FSCalendar">
+                                <rect key="frame" x="0.0" y="54" width="414" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Zmv-ne-HuE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemFillColor"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <constraints>
+                            <constraint firstItem="qY0-xV-f0M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="41p-aN-to1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qY0-xV-f0M" secondAttribute="trailing" id="S7s-ix-Oa8"/>
+                            <constraint firstItem="qY0-xV-f0M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="api-BW-yqx"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="cal" id="wYJ-1c-LJj"/>
+                    <connections>
+                        <outlet property="calendar" destination="qY0-xV-f0M" id="bFi-1P-Lf7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3549.275362318841" y="914.73214285714278"/>
+            <point key="canvasLocation" x="2600" y="915"/>
         </scene>
         <!--My Table View Controller-->
         <scene sceneID="lB4-X2-HtP">
@@ -243,18 +260,17 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ix-NN-zf9">
-                                            <rect key="frame" x="352" y="19.5" width="42" height="21"/>
+                                            <rect key="frame" x="342" y="19.5" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="6ix-NN-zf9" secondAttribute="trailing" constant="30" id="7Fe-fD-VEV"/>
                                         <constraint firstItem="I0d-rp-dVh" firstAttribute="top" secondItem="rqK-rY-s98" secondAttribute="topMargin" constant="8.5" id="Jzp-ly-owm"/>
                                         <constraint firstItem="6ix-NN-zf9" firstAttribute="centerY" secondItem="rqK-rY-s98" secondAttribute="centerY" id="Q1B-mp-QLl"/>
-                                        <constraint firstAttribute="trailing" secondItem="6ix-NN-zf9" secondAttribute="trailing" constant="20" id="RNz-Wy-30B"/>
                                         <constraint firstItem="I0d-rp-dVh" firstAttribute="leading" secondItem="rqK-rY-s98" secondAttribute="leadingMargin" constant="10" id="cZV-DR-M4o"/>
-                                        <constraint firstItem="6ix-NN-zf9" firstAttribute="trailing" secondItem="rqK-rY-s98" secondAttribute="trailingMargin" constant="10" id="d3s-cl-zTp"/>
                                         <constraint firstItem="I0d-rp-dVh" firstAttribute="centerY" secondItem="rqK-rY-s98" secondAttribute="centerY" id="noy-P0-XsV"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="I0d-rp-dVh" secondAttribute="bottom" constant="8.5" id="s3N-1F-Dc4"/>
                                     </constraints>
@@ -287,8 +303,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemFillColor">
-            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
