@@ -3,6 +3,7 @@
 //  Planner App
 //
 //  Created by Taylor Ngo on 6/18/21.
+//  112626118
 //
 
 import UIKit
@@ -23,6 +24,20 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
         calendar.dataSource = self
         dateFormatter.dateFormat = "yyyy-MM-dd"
         getAllItems()
+        setUpDates()
+        self.calendar.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        items = []
+        dates = []
+        dateStrings = []
+        getAllItems()
+        setUpDates()
+        self.calendar.reloadData()
+    }
+    
+    func setUpDates(){
         for item in items {
             dates.append(item.date ?? Date())
         }
@@ -30,6 +45,7 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
             dateStrings.append(self.dateFormatter.string(from: date))
         }
     }
+
     
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
         let dateString = self.dateFormatter.string(from: date)
